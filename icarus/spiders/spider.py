@@ -13,11 +13,11 @@ sys.setdefaultencoding('utf-8')
 class icarus_spider(CrawlSpider):#CrawlSpider类继承自Spider类，可以通过定义rules属性实现递归抓取
     name = "icarus"
     allowed_domains = ["icarus.silversky.moe"]#允许抓取的域名
-    start_urls = ["http://icarus.silversky.moe:666/category/illustration/normal-res-wallpaper/page/1"]#起始url
+    start_urls = ["http://icarus.silversky.moe:666/category/illustration/little-low-res-wallpaper/page/1"]#起始url
  
     #定义rules属性
     rules = (
-        Rule(SgmlLinkExtractor(allow=(r'\/category\/illustration\/normal-res-wallpaper\/page\/\d')),#使用正则表达式匹配符合要求的网页
+        Rule(SgmlLinkExtractor(allow=(r'\/category\/illustration\/little-low-res-wallpaper\/page\/\d')),#使用正则表达式匹配符合要求的网页
              callback=None,#回调函数
              follow=True#是否跟进此页上的url，如果callback为空的话则默认为true
             ),
