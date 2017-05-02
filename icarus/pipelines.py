@@ -26,5 +26,6 @@ class IcarusPipeline(object):
             print '##db wrote##'
         except:
             print '!!!db failed!!!'
+        #这不是正确的下载文件的方法，不要学我
         os.system("wget '"+item['image_url'][0]+"' -P '"+download_path+"'")
         print '*************'
