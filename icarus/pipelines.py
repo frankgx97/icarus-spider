@@ -11,9 +11,6 @@ from db import *
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-url_prefix = 'http://static.guoduhao.cn/nyanfm/bg/'
-download_path = '/var/web/static/nyanfm/bg/'
-
 class IcarusPipeline(object):
     def process_item(self, item, spider):
         print '============='
